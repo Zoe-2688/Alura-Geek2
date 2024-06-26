@@ -1,0 +1,76 @@
+{
+  "productos": [
+    {
+      "id": "1",
+      "nombre": "Gamecube Classic",
+      "precio": 90,
+      "imagen": "assets/imagenes/GameCube3.webp"
+    },
+    {
+      "id": "2",
+      "nombre": "Stormtrooper",
+      "precio": 10,
+      "imagen": "assets/imagenes/taza.png"
+    },
+    {
+      "id": "3",
+      "nombre": "Pink Nintendo 3DS",
+      "precio": 50,
+      "imagen": "assets/imagenes/Pink Nintendo 3DS.png"
+    },
+    {
+      "id": "4",
+      "nombre": "Game Boy Classic",
+      "precio": 80,
+      "imagen": "assets/imagenes/gameboy.png"
+    },
+    {
+      "id": "5",
+      "nombre": "Play Station 2",
+      "precio": 200,
+      "imagen": "assets/imagenes/Play Station 2.jpg"
+    },
+    {
+      "id": "6",
+      "nombre": "Pink Nintendo 3DS",
+      "precio": 50,
+      "imagen": "assets/imagenes/Pink Nintendo 3DS.png"
+    },
+    {
+      "id": "7",
+      "nombre": "Game Boy Classic",
+      "precio": 80,
+      "imagen": "assets/imagenes/gameboy.png"
+    },
+    {
+      "id": "8",
+      "nombre": "Stormtrooper",
+      "precio": 10,
+      "imagen": "assets/imagenes/taza.png"
+    },
+    {
+      "id": "9",
+      "nombre": "Pink Nintendo 3DS",
+      "precio": 50,
+      "imagen": "assets/imagenes/Pink Nintendo 3DS.png"
+    },
+    {
+      "id": "bc50",
+      "nombre": "Game boy advance ",
+      "precio": 70,
+      "imagen": "assets\\imagenes\\Nintendo-Game-Boy-Advance-Purple-FL.jpg"
+    },
+    {
+      "id": "5ae2",
+      "nombre": "Game boy advance ",
+      "precio": 90,
+      "imagen": "https://assets.nintendo.com/image/upload/ar_16:9,c_lpad,w_801/b_white/f_auto/q_auto/ncom/software/switch/70010000062483/ae3658c95435cd16b2702aeedcb91cc7b0660d54d18dfd449c314b8da9c70849"
+    },
+    {
+      "id": "87f7",
+      "nombre": "Super Nintendo",
+      "precio": 200,
+      "imagen": "https://www.latercera.com/resizer/FWxfjWSCcNNnOmluvTv3AYpE34g=/900x600/smart/arc-anglerfish-arc2-prod-copesa.s3.amazonaws.com/public/4H5WDB4IONB5LPGX2CC5JZKPIQ.jpg"
+    }
+  ]
+}

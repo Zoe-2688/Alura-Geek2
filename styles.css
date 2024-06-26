@@ -1,0 +1,307 @@
+body {
+    box-sizing: border-box;
+    font-family: 'Raleway', sans-serif;
+    width: 100%;
+    min-height: 100vh; /* Asegura que el body ocupe al menos toda la altura de la ventana */
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+    background: url('assets/imagenes/abstract-pixel.avif'); /* Ruta relativa a la imagen de fondo */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    display: flex;
+    flex-direction: column; /* Alinea header, main-container y footer en una columna */
+    justify-content: center; /* Alinea verticalmente todo el contenido en el centro */
+}
+
+/* Añadido para manejar el tamaño del contenido en pantallas pequeñas */
+@media (max-width: 768px) {
+    body {
+        font-size: 14px; /* Tamaño de fuente más pequeño para pantallas pequeñas */
+    }
+}
+
+
+
+/* Header */
+header {
+    width: 100%;
+    max-width: 100%;
+    padding: 20px;
+    background-color: #5D04D9;
+    color: white;
+    text-align: center;
+}
+
+h1 {
+    font-family: "Press Start 2P", system-ui;
+    font-size: 24px;
+}
+/* Estilo para el nav */
+.nav {
+    width: 100%;
+    max-width: 100%;
+    display: flex;
+    justify-content: space-around; /* Espacio alrededor de los elementos */
+    align-items: center; /* Alinea verticalmente en el centro */
+    padding: 10px 0; /* Ajusta el espaciado vertical */
+}
+
+.menu__list {
+    list-style-type: none; /* Quita los estilos de lista (viñetas) */
+    padding: 0;
+    margin: 0;
+    display: flex; /* Alinea los elementos de la lista en línea */
+}
+
+.menu__list__item {
+    margin: 0 10px; /* Espacio entre los elementos del menú */
+    font-family: "IBM Plex Mono", monospace;
+    color: #ffffff; /* Color blanco por defecto */
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.8); /* Efecto de sombra con brillo */
+    transition: text-shadow 0.3s ease-in-out; /* Transición suave del efecto de sombra */
+}
+
+.menu__list__item:hover {
+    text-shadow: none; /* Elimina la sombra al colocar el cursor encima */
+}
+.menu__list__item a {
+    text-decoration: none; /* Quita el subrayado del enlace */
+    color: inherit; /* Hereda el color del texto del padre */
+    font-weight: bold; /* Texto en negrita */
+}
+
+/* Contenedor principal para la disposición de dos columnas */
+.page-layout {
+    display: flex;
+    justify-content: center; /* Centra horizontalmente los elementos */
+    align-items: flex-start; /* Mantiene la alineación arriba */
+    gap: 20px;
+    padding: 20px;
+    height: 200vh; /* Ajusta según la necesidad */
+    margin-top: 20vh;
+}
+
+/* Estilo para el contenedor principal */
+.main-container {
+    flex: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 40%;
+    padding: 10px;
+    margin: 20px 0;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    height: 100vh; /* Limita la altura al 50% de la ventana */
+    
+}
+
+
+/* Estilos para la sección de productos */
+.product-section {
+    width: 100%;
+    max-height: 100vh; /* Limita la altura a 50% de la ventana */
+    overflow-y: auto; /* Habilita scroll vertical */
+    background-color: rgba(255, 195, 195, 0.2); /* Fondo más transparente */
+    backdrop-filter: blur(10px); /* Filtro de desenfoque para el efecto de vidrio esmerilado */
+    border: 1px solid rgba(255, 255, 255, 0.2); /* Borde blanco semitransparente */
+    padding: 50px;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Ajuste automático de columnas */
+    gap: 20px; /* Espacio entre los elementos */
+    width: 100%;
+}
+
+.card {
+    background-color: #5D04D9;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.2s;
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+}
+
+.card-container--info {
+    padding: 10px;
+    font-size: 1.2em;
+    color: rgb(255, 255, 255);
+    font-family: "IBM Plex Mono", monospace;
+}
+
+.card-container--value {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.2em;
+    color: rgb(255, 255, 255);
+}
+
+.card-container--value p {
+    font-size: 1em;
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+    margin-bottom: 5px;
+}
+
+.card-container--value img {
+    width: 24px;
+    height: auto;
+    cursor: pointer;
+}
+
+/* Estilo para el mensaje de "no productos" */
+.no-products-message {
+    display: none; /* Por defecto, está oculto */
+    text-align: center;
+    color: #999;
+    font-size: 1.2em;
+}
+
+
+/* Mostrar el mensaje cuando no hay productos */
+.product-section.no-products .no-products-message {
+    display: block;
+}
+
+.product-section.no-products .product-grid {
+    display: none; /* Oculta la rejilla de productos si no hay productos */
+}
+
+
+/* Estilo para el contenedor del formulario */
+.container-2 {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 30%; /* Ajusta según sea necesario */
+    padding: 20px;
+    margin: 20vh 0; /* Separación de 20vh arriba y abajo */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.formcontacto__text {
+    background-color: rgba(255, 195, 195, 0.2); /* Fondo más transparente */
+    backdrop-filter: blur(10px); /* Filtro de desenfoque para el efecto de vidrio esmerilado */
+    border: 1px solid rgba(255, 255, 255, 0.2); /* Borde blanco semitransparente */
+    padding: 20px;
+    border-radius: 20px;
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+    position: relative; /* Permite posicionar el brillo de los bordes */
+}
+
+.formcontacto__text::before {
+    content: '';
+    position: absolute;
+    top: -5px; /* Ajusta la posición del brillo */
+    left: -5px; /* Ajusta la posición del brillo */
+    right: -5px; /* Ajusta la posición del brillo */
+    bottom: -5px; /* Ajusta la posición del brillo */
+    background: rgba(255, 255, 255, 0.2); /* Color del brillo (blanco semitransparente) */
+    border-radius: 20px; /* Mismo radio que el contenedor */
+    z-index: -1; /* Asegura que el brillo esté detrás del contenido */
+    box-shadow: 0 0 10px 5px rgba(255, 255, 255, 0.2); /* Box-shadow para el brillo */
+}
+
+.formcontacto__title {
+    font-family: "Press Start 2P", system-ui;
+    margin-bottom: 20px;
+    color: #39004c;
+}
+
+.formcontacto__form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.formcontacto__input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #03318C;
+    border-radius: 50px;
+    box-sizing: border-box;
+}
+
+.formcontacto__textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #03318C;
+    border-radius: 20px;
+    box-sizing: border-box;
+    resize: vertical;
+}
+
+.error {
+    color: red;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+.formcontacto__boton-container {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.formcontacto__boton {
+    padding: 10px 20px;
+    width: 150px;
+    background-color: #00b7b4;
+    color: #fff;
+    border: none;
+    margin: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.formcontacto__boton:hover {
+    background-color: #0d00ff;
+}
+
+/* Footer */
+footer {
+    width: 100%;
+    max-width: 100%;
+    padding: 20px;
+    background-color: #5D04D9;
+    color: white;
+    text-align: center;
+}
+
+.footer__rodape {
+    background-color:#000000;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.footer__rodape h2 {
+    font-family: "Press Start 2P", system-ui;
+    font-size: 15px;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+}
